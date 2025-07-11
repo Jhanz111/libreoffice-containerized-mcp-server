@@ -1,7 +1,16 @@
 #!/bin/bash
-# Universal LibreOffice MCP Server Setup Script
-# Supports Linux, macOS, and Windows (via Git Bash/WSL)
+# Universal LibreOffice MCP Server v2.5.2 Setup Script
+# Revolutionary Template System Edition - World's First AI-Powered Template Management
+#
+# Creates complete project structure for the 15-tool LibreOffice MCP Server:
+# - Document Creation & Intelligence Tools
+# - Revolutionary Template System (Apply, Create, List, Style Transfer)  
+# - Advanced Operations (Compare, Merge, Split, Analysis)
+# - Cross-Platform Installation Automation
+#
+# Supports: Linux, macOS, and Windows (via Git Bash/WSL)
 # Version: v2.5.2-template-system
+# Features: Universal setup, platform detection, automated configuration
 
 set -e  # Exit on any error
 

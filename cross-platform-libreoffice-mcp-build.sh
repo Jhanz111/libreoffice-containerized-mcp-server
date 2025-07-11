@@ -1,7 +1,16 @@
 #!/bin/bash
 # LibreOffice MCP Server v2.5.2 Cross-Platform Build Script
-# Revolutionary Template System Edition
+# Revolutionary Template System Edition - World's First AI-Powered Template Management
+#
+# Builds the complete 15-tool LibreOffice MCP Server with:
+# - Document Creation & Intelligence Tools  
+# - Revolutionary Template System (Apply, Create, List, Style Transfer)
+# - Advanced Operations (Compare, Merge, Split, Analysis)
+# - Cross-Platform Container Support
+#
 # Supports: Linux, macOS, Windows (Git Bash/WSL2)
+# Version: v2.5.2-template-system
+# Container: Ubuntu 24.04 + LibreOffice + Python 3.12 + MCP Protocol
 
 set -e  # Exit on any error
 
