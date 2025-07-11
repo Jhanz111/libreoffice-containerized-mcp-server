@@ -1,0 +1,147 @@
+# LibreOffice MCP Server v2.5.2 - Revolutionary Template System
+# PowerShell Compatible Version - No Heredoc Syntax
+# Enhanced with: 15-Tool System including Complete Template Management
+# Version: v2.5.2-template-system
+
+FROM ubuntu:24.04
+
+# Build arguments for versioning and metadata
+ARG BUILD_DATE
+ARG VERSION=v2.5.2-template-system
+ARG VCS_REF=local
+
+# Metadata labels
+LABEL maintainer="LibreOffice MCP Development Team"
+LABEL version="${VERSION}"
+LABEL description="LibreOffice MCP Server with Revolutionary Template System"
+LABEL build-date="${BUILD_DATE}"
+LABEL vcs-ref="${VCS_REF}"
+LABEL features="document-creation,document-reading,advanced-analysis,template-system"
+
+# Environment variables for LibreOffice and Python
+ENV DEBIAN_FRONTEND=noninteractive
+ENV DISPLAY=:99
+ENV PYTHONPATH=/usr/lib/libreoffice/program:/opt/mcp/python:$PYTHONPATH
+ENV UNO_PATH=/usr/lib/libreoffice/program
+ENV URE_BOOTSTRAP=vnd.sun.star.pathname:/usr/lib/libreoffice/program/fundamentalrc
+ENV LIBREOFFICE_HEADLESS=1
+ENV MCP_SERVER_MODE=production
+
+# System update and essential packages
+RUN apt-get update && apt-get install -y \
+    wget \
+    curl \
+    gnupg2 \
+    software-properties-common \
+    apt-transport-https \
+    ca-certificates \
+    xvfb \
+    x11-utils \
+    fontconfig \
+    fonts-liberation \
+    fonts-dejavu-core \
+    python3 \
+    python3-pip \
+    python3-venv \
+    python3-uno \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install complete LibreOffice suite from Ubuntu repositories
+RUN apt-get update && apt-get install -y \
+    libreoffice \
+    libreoffice-writer \
+    libreoffice-calc \
+    libreoffice-impress \
+    libreoffice-base \
+    libreoffice-draw \
+    libreoffice-math \
+    libreoffice-java-common \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create MCP directory structure
+RUN mkdir -p /opt/mcp/python /opt/mcp/tools /opt/mcp/utils /home/libreoffice/Documents
+
+# Install Python MCP dependencies (Ubuntu 24.04 compatible)
+RUN python3 -m pip install --no-cache-dir --break-system-packages \
+    mcp \
+    python-dateutil \
+    typing-extensions
+
+# Copy revolutionary MCP server with Template System
+COPY libreoffice_mcp_server.py /opt/mcp/python/libreoffice_mcp_server.py
+
+# Create startup script using echo commands (PowerShell compatible)
+RUN echo '#!/bin/bash' > /opt/mcp/startup.sh
+RUN echo '' >> /opt/mcp/startup.sh
+RUN echo '# LibreOffice MCP Server v2.5.2 Startup Script' >> /opt/mcp/startup.sh
+RUN echo '# Revolutionary Template System Edition' >> /opt/mcp/startup.sh
+RUN echo '' >> /opt/mcp/startup.sh
+RUN echo 'echo "🚀 Starting LibreOffice MCP Server v2.5.2" >&2' >> /opt/mcp/startup.sh
+RUN echo 'echo "🌟 REVOLUTIONARY TEMPLATE SYSTEM EDITION" >&2' >> /opt/mcp/startup.sh
+RUN echo 'echo "Features: 15-Tool Complete Document Intelligence + Template Management" >&2' >> /opt/mcp/startup.sh
+RUN echo 'echo "Template Tools: Apply, Create, List, Style Transfer" >&2' >> /opt/mcp/startup.sh
+RUN echo '' >> /opt/mcp/startup.sh
+RUN echo '# Start Xvfb for headless LibreOffice operation' >> /opt/mcp/startup.sh
+RUN echo 'echo "Starting virtual display..." >&2' >> /opt/mcp/startup.sh
+RUN echo 'Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset &' >> /opt/mcp/startup.sh
+RUN echo 'XVFB_PID=$!' >> /opt/mcp/startup.sh
+RUN echo '' >> /opt/mcp/startup.sh
+RUN echo '# Wait for display to be ready' >> /opt/mcp/startup.sh
+RUN echo 'sleep 2' >> /opt/mcp/startup.sh
+RUN echo '' >> /opt/mcp/startup.sh
+RUN echo '# Configure LibreOffice directories' >> /opt/mcp/startup.sh
+RUN echo 'mkdir -p /home/libreoffice/.config/libreoffice/4/user/config >&2' >> /opt/mcp/startup.sh
+RUN echo '' >> /opt/mcp/startup.sh
+RUN echo '# Start LibreOffice with UNO listener' >> /opt/mcp/startup.sh
+RUN echo 'echo "Starting LibreOffice with UNO listener..." >&2' >> /opt/mcp/startup.sh
+RUN echo '/usr/lib/libreoffice/program/soffice --headless --invisible --nocrashreport --nodefault --nofirststartwizard --nologo --norestore --accept="socket,host=localhost,port=2002;urp;StarOffice.ServiceManager" &' >> /opt/mcp/startup.sh
+RUN echo '' >> /opt/mcp/startup.sh
+RUN echo '# Wait for LibreOffice to initialize' >> /opt/mcp/startup.sh
+RUN echo 'sleep 5' >> /opt/mcp/startup.sh
+RUN echo '' >> /opt/mcp/startup.sh
+RUN echo 'echo "🎉 LibreOffice MCP Server v2.5.2 Template System: READY" >&2' >> /opt/mcp/startup.sh
+RUN echo 'echo "📝 Template Tools: Apply templates with placeholder replacement" >&2' >> /opt/mcp/startup.sh
+RUN echo 'echo "🏗️ Template Creation: Convert documents to reusable templates" >&2' >> /opt/mcp/startup.sh
+RUN echo 'echo "📚 Template Discovery: Browse and search template library" >&2' >> /opt/mcp/startup.sh
+RUN echo 'echo "🎨 Style Transfer: Professional formatting workflows" >&2' >> /opt/mcp/startup.sh
+RUN echo 'echo "🔥 WORLDS FIRST AI TEMPLATE MANAGEMENT SYSTEM!" >&2' >> /opt/mcp/startup.sh
+RUN echo '' >> /opt/mcp/startup.sh
+RUN echo '# Start the revolutionary MCP server' >> /opt/mcp/startup.sh
+RUN echo 'cd /opt/mcp/python' >> /opt/mcp/startup.sh
+RUN echo 'exec python3 libreoffice_mcp_server.py' >> /opt/mcp/startup.sh
+
+# Make startup script executable
+RUN chmod +x /opt/mcp/startup.sh
+
+# Set working directory
+WORKDIR /opt/mcp/python
+
+# Create non-root user for security
+RUN useradd -m -s /bin/bash libreoffice && \
+    chown -R libreoffice:libreoffice /opt/mcp /home/libreoffice && \
+    chmod -R 755 /opt/mcp
+
+# Switch to non-root user
+USER libreoffice
+
+# Health check for Revolutionary Template System
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+  CMD python3 -c "import uno; print('LibreOffice MCP v2.5.2 Template System: Healthy')" || exit 1
+
+# Container metadata for Revolutionary Template System
+LABEL toolkit.version="v2.5.2"
+LABEL toolkit.edition="template-system"
+LABEL toolkit.features="template-apply,template-create,template-list,enhanced-style-transfer"
+LABEL toolkit.tools="15-total"
+LABEL toolkit.capabilities="creation,reading,analysis,comparison,merging,template-management"
+LABEL toolkit.libreoffice.version="24.8.4"
+LABEL toolkit.python.version="3.12"
+LABEL toolkit.mcp.protocol="stdio"
+LABEL template.system="revolutionary"
+LABEL template.workflows="complete"
+
+# Entry point with Template System capabilities
+ENTRYPOINT ["/opt/mcp/startup.sh"]
+
+# Default command for Template System mode
+CMD ["--mode=mcp", "--template-system=revolutionary"]
