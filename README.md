@@ -87,10 +87,23 @@ A **Model Context Protocol (MCP) server** that provides Claude Desktop with dire
 ### Installation
 
 ```
-# 1. Clone the repository
+# 1. Clone the repository  
+git clone https://github.com/Jhanz111/libreoffice-containerized-mcp-server.git 
+cd libreoffice-containerized-mcp-server
 ```
 
-**For detailed installation instructions, see [INSTALLATION.md](https://claude.ai/chat/INSTALLATION.md)**
+```
+# 2. Run the setup script 
+./libreoffice-mcp-setup.sh
+```
+
+```
+# 3. Build the container 
+cd "Image Build Files" 
+./cross-platform-libreoffice-mcp-build.sh
+```
+
+**For detailed installation instructions, see [INSTALLATION.md](INSTALLATION.md)**
 
 ---
 
@@ -417,7 +430,7 @@ We welcome suggestions for:
 
 ### License
 
-This project is licensed under the MIT License - see the [LICENSE](https://claude.ai/chat/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ### Attribution
 
