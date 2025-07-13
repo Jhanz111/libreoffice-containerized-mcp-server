@@ -490,16 +490,16 @@ Try these commands to explore the full capability:
 
 ## 📚 Additional Resources
 
-- **[API Documentation](https://claude.ai/chat/API-Documentation.md):** Complete tool reference
-- **[Troubleshooting Guide](https://claude.ai/chat/Troubleshooting-Guide.md):** Comprehensive problem solving
+- **[API Documentation](API-Documentation.md):** Complete tool reference
+- **[Troubleshooting Guide](Troubleshooting-Guide.md):** Comprehensive problem solving
 - **[GitHub Repository](https://github.com/Jhanz111/libreoffice-containerized-mcp-server):** Source code and issues
-- **[README](https://claude.ai/chat/README.md):** Project overview and features
+- **[README](README.md):** Project overview and features
 
 ## 🎯 Support
 
 If you encounter issues:
 
-1. **Check the [Troubleshooting Guide](https://claude.ai/chat/Troubleshooting-Guide.md)**
+1. **Check the [Troubleshooting Guide](Troubleshooting-Guide.md)**
 2. **Verify all prerequisites are installed**
 3. **Test container manually before Claude Desktop integration**
 4. **Report issues on [GitHub](https://github.com/Jhanz111/libreoffice-containerized-mcp-server/issues)**
