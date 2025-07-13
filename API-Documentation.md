@@ -404,10 +404,9 @@ Error responses include:
 
 ## 📚 Additional Resources
 
-- [Installation Guide](https://claude.ai/chat/INSTALLATION.md)
-- [Troubleshooting Guide](https://claude.ai/chat/Troubleshooting-Guide.md)
-- [Usage Examples](https://claude.ai/chat/examples/)
-- [Container Configuration](https://claude.ai/chat/Image-Build-Files/)
+- [Installation Guide](INSTALLATION.md)
+- [Troubleshooting Guide](Troubleshooting-Guide.md)
+- [README](README.md)
 
 ---
 
