@@ -4,7 +4,10 @@
 
 **The world's first complete AI-powered LibreOffice Template Management System** with 15 professional tools for document creation, analysis, and automation.
 
- [![License: MIT](file:///C:/Users/johnh/AppData/Local/Temp/lu54041dp4pf.tmp/lu54041dp4pj_tmp_826023cc.gif)](https://opensource.org/licenses/MIT)[ ![Docker](file:///C:/Users/johnh/AppData/Local/Temp/lu54041dp4pf.tmp/lu54041dp4pj_tmp_cd5535b2.gif)](https://www.docker.com/)[ ![Podman](file:///C:/Users/johnh/AppData/Local/Temp/lu54041dp4pf.tmp/lu54041dp4pj_tmp_25f98292.gif)](https://podman.io/)[![Claude Desktop](file:///C:/Users/johnh/AppData/Local/Temp/lu54041dp4pf.tmp/lu54041dp4pj_tmp_8385c338.gif)](https://claude.ai/)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/) [![Podman](https://img.shields.io/badge/podman-892CA0?style=for-the-badge&logo=podman&logoColor=white)](https://podman.io/) [![Claude Desktop](https://img.shields.io/badge/Claude%20Desktop-FF6B35?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.ai/)
+
+
 
 ---
 
