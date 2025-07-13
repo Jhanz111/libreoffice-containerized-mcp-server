@@ -1,8 +1,8 @@
 # LibreOffice MCP Server v2.5.2
 
-## 🚀 Revolutionary AI-Powered Document Automation
+## 🚀 AI-Powered Document Automation
 
-**The world's first complete AI-powered LibreOffice Template Management System** with 15 professional tools for document creation, analysis, and automation.
+**The world's first complete AI-powered LibreOffice Template Management System** with 15 tools for document creation, analysis, and automation.
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Container: Podman](https://img.shields.io/badge/Container-Podman-892CA0.svg)](https://podman.io/) [![AI: Claude Desktop](https://img.shields.io/badge/AI-Claude%20Desktop-FF6B35.svg)](https://claude.ai/)
@@ -131,28 +131,6 @@ cd "Image Build Files"
 
 ---
 
-## 💡 Usage Examples
-
-### Basic Document Creation
-
-```
-Create a professional business letter with company letterhead
-```
-
-### Template Workflow
-
-```
-# Create a template
-```
-
-### Advanced Operations
-
-```
-# Document intelligence
-```
-
----
-
 ## 🏗️ Architecture
 
 ### Container-Based Design
@@ -235,13 +213,6 @@ This is the **world's first AI-powered LibreOffice template management system**,
 - **Template-Aware Operations**: Style transfer that preserves placeholders
     
 
-### Template Workflow Example
-
-```
-1. Create Template:
-```
-
----
 
 ## 🔧 Development & Contributing
 
