@@ -5,9 +5,7 @@
 **The world's first complete AI-powered LibreOffice Template Management System** with 15 professional tools for document creation, analysis, and automation.
 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/) [![Podman](https://img.shields.io/badge/podman-892CA0?style=for-the-badge&logo=podman&logoColor=white)](https://podman.io/) [![Claude Desktop](https://img.shields.io/badge/Claude%20Desktop-FF6B35?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.ai/)
-
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Container: Podman](https://img.shields.io/badge/Container-Podman-892CA0.svg)](https://podman.io/) [![AI: Claude Desktop](https://img.shields.io/badge/AI-Claude%20Desktop-FF6B35.svg)](https://claude.ai/)
 
 ---
 
